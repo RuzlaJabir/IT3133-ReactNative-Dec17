@@ -1,15 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import {PaperProvider, Text, Divider } from 'react-native-paper';
+import { PaperProvider } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-web';
 import Home from './components/Home';
+import { ScrollView } from 'react-native-web';
 
 export default function App() {
   return (
     <PaperProvider>
-      <View style={styles.container}>
-        <Home />
-        <StatusBar style="auto" />
-      </View>
+      
+        <ScrollView>
+          <View style={styles.container}>
+            <Home />
+            <StatusBar style="auto" />
+          </View>
+        </ScrollView>
+    
     </PaperProvider>
 
   );
