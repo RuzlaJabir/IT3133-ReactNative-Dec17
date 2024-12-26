@@ -9,16 +9,14 @@ import ContactUs from './components/ContactUs';
 export default function App() {
   return (
     <PaperProvider>
-
-      <ScrollView>
-        <SafeAreaView>
+      <SafeAreaView>
+        <ScrollView>
           <View style={styles.container}>
             <ContactUs />
             <StatusBar style="auto" />
           </View>
-        </SafeAreaView>
-      </ScrollView>
-
+        </ScrollView>
+      </SafeAreaView>
     </PaperProvider>
 
   );
