@@ -10,12 +10,14 @@ export default function App() {
     <PaperProvider>
       
         <ScrollView>
+        <SafeAreaView>
           <View style={styles.container}>
             <Home />
             <StatusBar style="auto" />
           </View>
+          </SafeAreaView>
         </ScrollView>
-    
+      
     </PaperProvider>
 
   );
