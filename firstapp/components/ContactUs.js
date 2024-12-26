@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import { Text, Divider } from 'react-native-paper';
+import { Text, Divider, TextInput } from 'react-native-paper';
 
 export default function ContactUs() {
     return (
@@ -9,7 +9,7 @@ export default function ContactUs() {
                 <Divider />
             </View>
             <View style={styles.body}>
-
+                <TextInput label="Email"/>
             </View>
             <View style={styles.footer}>
                 <Text>Myapp © 2024</Text>
