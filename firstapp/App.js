@@ -4,20 +4,21 @@ import { PaperProvider } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-web';
 import Home from './components/Home';
 import { ScrollView } from 'react-native-web';
+import ContactUs from './components/ContactUs';
 
 export default function App() {
   return (
     <PaperProvider>
-      
-        <ScrollView>
+
+      <ScrollView>
         <SafeAreaView>
           <View style={styles.container}>
-            <Home />
+            <ContactUs />
             <StatusBar style="auto" />
           </View>
-          </SafeAreaView>
-        </ScrollView>
-      
+        </SafeAreaView>
+      </ScrollView>
+
     </PaperProvider>
 
   );
