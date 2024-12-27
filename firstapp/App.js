@@ -1,22 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, View, ScrollView, Platform } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-web';
 import Home from './components/Home';
-import { ScrollView } from 'react-native-web';
 import ContactUs from './components/ContactUs';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
     <PaperProvider>
-      <SafeAreaView>
-        <ScrollView>
-          <View style={styles.container}>
-            <ContactUs />
-            <StatusBar style="auto" />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <SafeAreaProvider>
+        <SafeAreaView>
+          <KeyboardAvoidingView  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+            <ScrollView>
+              <View style={styles.container}>
+                <ContactUs />
+                <StatusBar style="auto" />
+              </View>
+            </ScrollView>
+          </KeyboardAvoidingView>
+        </SafeAreaView>
+      </SafeAreaProvider>
     </PaperProvider>
 
   );
