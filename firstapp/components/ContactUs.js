@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Text, Divider, TextInput } from 'react-native-paper';
+import { Text, Divider, TextInput, Button } from 'react-native-paper';
 
 export default function ContactUs() {
     const [name,setName] = useState();
@@ -30,6 +30,10 @@ export default function ContactUs() {
                 <View style={styles.input}>
                     <TextInput label="Message" mode='outlined' multiline numberOfLines={5}/>
                 </View>
+                <View style={styles.input}>
+                     <Button icon="camera" mode="contained">Contact</Button>
+                </View>
+
                 <Text>{name}</Text>
             </View>
             <View style={styles.footer}>
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     body: {
-        flex: 25,
+        flex: 30,
         width: '100%'
     },
     footer: {
